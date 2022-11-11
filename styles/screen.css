@@ -1,0 +1,79 @@
+@import url('fonts.css');
+
+* {
+	font-family: gotham ultra, sans;
+	box-sizing: border-box;
+	font-weight: normal;
+}
+
+:root {
+	font-size: calc(min(2vw, 2vh));
+}
+
+body, html, main {
+	padding: 0;
+	margin: 0;
+	background: black;
+	display: block;
+}
+
+main {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	padding: 3rem;
+	flex-direction: column;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	color: white
+}
+
+main a {
+	border-radius: 5px;
+	border: solid 4px white;
+	color: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 0);
+	cursor: pointer;
+	padding: 1rem 2rem;
+	letter-spacing: 0.25rem;
+	transition: background 400ms, color 400ms, opacity 1s ease 500ms;
+}
+
+main a:hover,
+main a:focus {
+	background: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+}
+
+h1, h2, main a {
+	opacity: 0;
+	margin: 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+main.ready h1, main.ready h2, main.ready a {
+	opacity: 1;
+}
+
+main.ready h1 {
+	letter-spacing: 0.6rem;
+}
+
+h1 {
+	letter-spacing: 0.1rem;
+	font-size: 4rem;
+	font-family: "gotham bold", sans;
+	transition: opacity 1s, letter-spacing 1s;
+}
+
+h2 {
+	letter-spacing: 0.25rem;
+	padding: 1rem 0 4rem;
+	line-height: 1.8;
+	font-size: 1.5rem;
+	font-family: "gotham ultra", sans;
+	transition: opacity 1s ease 250ms;
+}
